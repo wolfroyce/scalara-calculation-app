@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "name": "Hypotenuse berechnen",
+    "description": "Anhand von Ankathete und Gegenkathete die Länge der Hypotenuse berechnen",
+    "inputs": [
+      "Anakthete",
+      "Gegenkathete"
+    ],
+    "calculationRule": "Ergebnis = root(a²+b²)",
+    "variables": [
+      "a",
+      "b"
+    ],
+    "ruleAsCode": "sqrt(a^2 + b^2)"
+  },
+  {
+    "id": "2",
+    "name": "Ganzzahligen Rest ausgeben",
+    "description": "Ausgehend von einer Zahl wird der ganzzahlige Rest einer Division berechnet",
+    "inputs": [
+      "Zahl",
+      "Divisor"
+    ],
+    "calculationRule": "Ergebnis = Zahl mod(Divisor)",
+    "variables": [
+      "a",
+      "b"
+    ],
+    "ruleAsCode": "a % b"
+  },
+  {
+    "id": "3",
+    "name": "Kreisumfang berechnen",
+    "description": "Mit dem Durchmesser eines Kreises kann hier der Umfang berechnet werden",
+    "inputs": [
+      "Durchmesser"
+    ],
+    "calculationRule": "Ergebnis = Durchmesser * 3,1415",
+    "variables": [
+      "a"
+    ],
+    "ruleAsCode": "a * 3.1415"
+  },
+  {
+    "id": "4",
+    "name": "Volumen eines Zylinders berechnen",
+    "description": "Mit dem Radius eines Zylinders kann hier das Volumen des Zylinders berechnet werden",
+    "inputs": [
+      "Radius"
+    ],
+    "calculationRule": "Ergebnis = π * r²",
+    "variables": [
+      "r"
+    ],
+    "ruleAsCode": "pi * r^2"
+  }
+]
