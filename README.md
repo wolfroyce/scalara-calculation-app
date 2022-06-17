@@ -1,2 +1,2 @@
-# scalara-calculation-app
+# scalara-calculation-app-backend
 Entwickleraufgabe Scalara
