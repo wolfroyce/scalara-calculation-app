@@ -9,17 +9,17 @@ public class CalculationRule implements Serializable {
     private String name;
     private String description;
     private String[] inputs;
-    private String rule;
+    private String calculationRule;
     private String[] variables;
     private String ruleAsCode;
 
-    public CalculationRule(String id, String name, String description, String[] inputs, String rule,
+    public CalculationRule(String id, String name, String description, String[] inputs, String calculationRule,
                            String[] variables, String ruleAsCode) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.inputs = inputs;
-        this.rule = rule;
+        this.calculationRule = calculationRule;
         this.variables = variables;
         this.ruleAsCode = ruleAsCode;
     }
@@ -43,8 +43,8 @@ public class CalculationRule implements Serializable {
         return inputs;
     }
 
-    public String getRule() {
-        return rule;
+    public String getCalculationRule() {
+        return calculationRule;
     }
 
     public String[] getVariables() {
@@ -62,7 +62,7 @@ public class CalculationRule implements Serializable {
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", inputs=" + Arrays.toString(inputs) +
-                ", calculationRule='" + rule + '\'' +
+                ", calculationRule='" + calculationRule + '\'' +
                 ", variables=" + Arrays.toString(variables) +
                 ", ruleAsCode='" + ruleAsCode + '\'' +
                 '}';
