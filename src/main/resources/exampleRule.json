@@ -1,0 +1,17 @@
+{
+  "id": "1",
+  "name": "Name der Rechenregel",
+  "description": "Beschreibung der Rechenregel",
+  "inputs": [
+    "input1",
+    "input2",
+    "inputN"
+  ],
+  "calculationRule": "Ergebnis = a+b*n",
+  "variables": [
+    "a",
+    "b",
+    "n"
+  ],
+  "ruleAsCode": "a+b*n"
+}
