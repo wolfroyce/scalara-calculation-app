@@ -42,13 +42,6 @@ public class CalculationRuleResource {
         return new ResponseEntity<>(variables, HttpStatus.OK);
     }
 
-    @GetMapping("/calculationRuleById/{id}")
-    public ResponseEntity<String> getCalculationRuleById(@PathVariable("id") String id) {
-        String name = calculationRuleService.getCalculationRuleById(id);
-
-        return new ResponseEntity<>(name, HttpStatus.OK);
-    }
-
     @GetMapping("/calculationExecution/{id}/{inputs}")
     public ResponseEntity<Double> executeCalculation(@PathVariable("id") String id, @PathVariable("inputs") double[] inputs) {
         double result = calculationRuleService.executeCalculation(id, inputs);

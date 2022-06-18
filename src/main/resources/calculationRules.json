@@ -4,7 +4,7 @@
     "name": "Hypotenuse berechnen",
     "description": "Anhand von Ankathete und Gegenkathete die Länge der Hypotenuse berechnen",
     "inputs": [
-      "Anakthete",
+      "Ankathete",
       "Gegenkathete"
     ],
     "calculationRule": "Ergebnis = root(a²+b²)",

@@ -34,6 +34,33 @@ public class CalculationLogic {
         return expression.evaluate();
     }
 
+    public String[] getVariablesById(String id) {
+        CalculationRule calculationRule = getCalculationRule(id);
+
+        return Objects.requireNonNull(calculationRule).getVariables();
+    }
+
+    public String[] getInputsById(String id) {
+        CalculationRule calculationRule = getCalculationRule(id);
+
+        return Objects.requireNonNull(calculationRule).getInputs();
+    }
+
+    private CalculationRule getCalculationRule(String id) {
+        List<CalculationRule> rules = jsonReader.getAllCalculationRules();
+
+        return rules.stream()
+                .filter(rule -> id.equals(rule.getId()))
+                .findAny()
+                .orElse(null);
+    }
+
+    private String getRuleAsCodeById(String id) {
+        CalculationRule calculationRule = getCalculationRule(id);
+
+        return Objects.requireNonNull(calculationRule).getRuleAsCode();
+    }
+
     private Set<String> convertArrayToSet(String[] array) {
         return new HashSet<>(Arrays.asList(array));
     }
@@ -50,42 +77,6 @@ public class CalculationLogic {
         }
 
         return variableMap;
-
     }
-
-    private String getRuleAsCodeById(String id) {
-        CalculationRule calculationRule = getCalculationRule(id);
-
-        return Objects.requireNonNull(calculationRule).getRuleAsCode();
-    }
-
-    public String[] getVariablesById(String id) {
-        CalculationRule calculationRule = getCalculationRule(id);
-
-        return Objects.requireNonNull(calculationRule).getVariables();
-    }
-
-    private CalculationRule getCalculationRule(String id) {
-        List<CalculationRule> rules = jsonReader.getAllCalculationRules();
-
-        return rules.stream()
-                .filter(rule -> id.equals(rule.getId()))
-                .findAny()
-                .orElse(null);
-    }
-
-    public String[] getInputsById(String id) {
-        CalculationRule calculationRule = getCalculationRule(id);
-
-        return Objects.requireNonNull(calculationRule).getInputs();
-    }
-
-    public String getCalculationRuleById(String id) {
-        CalculationRule calculationRule = getCalculationRule(id);
-
-        return Objects.requireNonNull(calculationRule).getName();
-    }
-
-
 }
 

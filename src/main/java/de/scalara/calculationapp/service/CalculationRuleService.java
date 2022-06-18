@@ -30,10 +30,6 @@ public class CalculationRuleService {
         return calculationLogic.getInputsById(id);
     }
 
-    public String getCalculationRuleById(String id) {
-        return calculationLogic.getCalculationRuleById(id);
-    }
-
     public double executeCalculation(String id, double... inputs) {
         return calculationLogic.executeCalculation(id, inputs);
     }
