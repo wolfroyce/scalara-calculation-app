@@ -2,6 +2,26 @@
 
 Entwickleraufgabe
 
+Was brauche ich um die Applikation zu starten?
+
+- Java
+- npm (package manager)
+- angular cli
+- IDE, um Java Applikation (Backend) zu starten
+
+Um die Anwendung zu starten führe folgende Schritte aus:
+
+1. Checke sowohl den master Branch des
+   backend-repos (https://github.com/wolfroyce/scalara-calculation-app-backend/tree/master) als auch des
+   frontend-repos (https://github.com/wolfroyce/scalara-calculation-app-frontend/tree/master)
+   aus
+2. Starte zuerst das Backend (Über eine beliebige IDE)
+3. Starte das Frontend
+    - Öffne eine beliebige CLI und navigiere in das Folder "calculationapp-frontend"
+    - Führe dort "ng serve" aus um das Frontend zu starten
+4. Öffne http://localhost:4200/home (möglicherweise läuft das Frontend auf einem anderen Port. Für diesen Fall ändere
+   bitten der Port in der URL. Standardmäßig sollte es jedoch der Port: 4200 für Angular sein)
+
 Um eine neue Rechenregel hinzuzufügen, sind folgende Schritte notwendig:
 
 1. Beispiel Rechenregel aus "exampleRule.json" in "calculationRules.json" nach der letzten Rechenregel einfügen
